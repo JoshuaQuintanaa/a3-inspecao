@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("industriafundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.356); /* fundo quase transparente */
+    backdrop-filter: blur(10px);               /* vidro fosco */
+    -webkit-backdrop-filter: blur(10px);       /* compatibilidade com Safari */
+
+    width: 550px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo h1 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0d0e0d; /* Verde elegante */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.titulo p {
+  font-size: 20px;
+  color: #080808; /* Mesmo verde para consistência */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+
+
+.box.Item1{
+    background-color: blue;
+
+}
+
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box; /* para incluir padding na largura total */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #ec8b0d, #e2df2a);
+    color: rgb(8, 8, 8);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 82, 204, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(224, 112, 36, 0.8);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.estrelas input {
+    display: none;
+}
+
+.estrelas label {
+    font-size: 24px;
+    cursor: pointer;
+    color: gold;
+    padding: 0 2px;
+}
+
+.status-regular {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pendente {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-irregular {
+    color: red;
+    font-weight: bold;
+}
+
+.agradecimento {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.promocoes {
+    margin-top: 30px;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.produto {
+    background-color: #fff8f8;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 120px;
+    position: relative;
+    border-radius: 8px;
+}
+
+.faixa-promocao {
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 12px;
+    transform: rotate(-15deg);
+}

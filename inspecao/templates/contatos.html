@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <div class="titulo">
+            <h1>Contratos</h1>
+        </div>
+        {% if avaliacoes %}
+            <ul>
+                {% for a in avaliacoes %}
+                <div class="form-container"><label><strong>Empresa contratante</strong>: {{ a.nomeDaEmpresa }}</label><br><br>
+                    <label><strong>Nome</strong>: {{a.nome}}</label><br><br>
+                    <label><strong>Situação</strong>: <span id="status-indicador" class="status-regular">Regular</span></label><br><br>
+                    <label><strong>CNPJ</strong>: {{a.cnpj}}</label><br><br>
+                    <label><strong>Telefone</strong>: {{a.telefone}}</label><br><br>
+                    <label><strong>Tipo</strong>: {{a.tipo}}</label><br><br>
+                    <label><strong>Motivo</strong>: {{a.motivo}}</label><br><br>
+                    <label><strong>Data de visita</strong>: {{a.data}}</label><br>
+                </div>
+                    
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhum contato registrado ainda.</p>
+        {% endif %}
+        <div class="button-group">
+            <button onclick="window.location.href='/'">Voltar</button>
+            <button type="button" onclick="window.location.href='/contatos'">Inspeções Pendentes</button>
+
+             <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

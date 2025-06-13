@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Avaliação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <div class="titulo">
+        <h1>Formulário de Inspeção</h1>
+        <p>Por favor, preencha os dados abaixo.</p>
+        </div>
+
+        <form action="/avaliar" method="post">
+            <input type="text" name="nome" placeholder="Nome completo" required><br>
+            <input type="text" name="nomeDaEmpresa" placeholder="Nome da empresa" required><br>
+            <input type="text" name="cpf" placeholder="CPF" required><br>
+            <input type="text" name="cnpj" placeholder="CNPJ" required><br>
+            <input type="tel" name="telefone" placeholder="Telefone" required><br>
+            <input type="text" name="tipo" placeholder="Tipo da inspeção" required><br>
+            <input type="text" name="motivo" placeholder="Motivo" required><br>
+            <input type="date" name="data" required><br>
+
+            <div class="button-group">
+                <button type="submit">Solicitar Inspeção</button>
+                <button type="button" onclick="window.location.href='/contatos'">Inspeções Pendentes</button>
+            </div>
+        </form>
+                <div class = "box">
+            <div class = "Item1"></div>
+            <div class = "Item2"></div>
+             
+        </div>
+    </div>
+</body>
+</html>
